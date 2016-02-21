@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,29 +19,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os3-3g-7wa">
-                                <rect key="frame" x="0.0" y="132" width="608" height="121"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os3-3g-7wa">
+                                <rect key="frame" x="0.0" y="134" width="608" height="180"/>
                                 <color key="backgroundColor" red="0.99287458890000002" green="0.85047043010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="tDX-ze-8na"/>
-                                </constraints>
                                 <state key="normal" title="重置"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrF-7i-8Cb">
-                                <rect key="frame" x="0.0" y="253" width="308" height="347"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrF-7i-8Cb">
+                                <rect key="frame" x="0.0" y="314" width="300" height="286"/>
                                 <color key="backgroundColor" red="0.69073147819801162" green="1" blue="0.48239356592827154" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="开始"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jb-dw-CPt">
-                                <rect key="frame" x="308" y="253" width="292" height="349"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jb-dw-CPt">
+                                <rect key="frame" x="300" y="314" width="300" height="288"/>
                                 <color key="backgroundColor" red="0.17876889529860618" green="1" blue="0.98656262222887403" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="暂停"/>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKC-Tb-Gdv" userLabel="timeView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="132"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKC-Tb-Gdv" userLabel="timeView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="133.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ss-UbC" userLabel="timeLabel">
-                                        <rect key="frame" x="290" y="24" width="21" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ss-UbC" userLabel="timeLabel">
+                                        <rect key="frame" x="291" y="8" width="19" height="117.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -50,38 +48,33 @@
                                     <constraint firstItem="B9i-Ss-UbC" firstAttribute="centerX" secondItem="JKC-Tb-Gdv" secondAttribute="centerX" id="JtQ-yJ-k8o"/>
                                     <constraint firstItem="B9i-Ss-UbC" firstAttribute="bottom" secondItem="JKC-Tb-Gdv" secondAttribute="bottomMargin" id="P1v-Ww-oDp"/>
                                     <constraint firstItem="B9i-Ss-UbC" firstAttribute="centerY" secondItem="JKC-Tb-Gdv" secondAttribute="centerY" id="bYk-ai-esU"/>
-                                    <constraint firstAttribute="height" constant="132" id="cHA-AZ-kcW"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FV2-IC-DxB" userLabel="helpView">
-                                <rect key="frame" x="184" y="375" width="0.0" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="pfg-UB-uwW"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JKC-Tb-Gdv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="65o-HR-5rO"/>
-                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="top" secondItem="os3-3g-7wa" secondAttribute="bottom" id="8bn-ga-1Sb"/>
-                            <constraint firstItem="1Jb-dw-CPt" firstAttribute="leading" secondItem="jrF-7i-8Cb" secondAttribute="trailing" id="D4Z-eo-TrO"/>
-                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="width" secondItem="1Jb-dw-CPt" secondAttribute="width" id="Eyg-iZ-arf"/>
-                            <constraint firstItem="FV2-IC-DxB" firstAttribute="leading" secondItem="jrF-7i-8Cb" secondAttribute="trailing" id="GMG-Dx-YXR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jrF-7i-8Cb" secondAttribute="bottom" id="HQs-jS-FEh"/>
-                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="HYa-Sx-XgR"/>
-                            <constraint firstItem="1Jb-dw-CPt" firstAttribute="top" secondItem="os3-3g-7wa" secondAttribute="bottom" id="NIe-GM-fSd"/>
-                            <constraint firstItem="os3-3g-7wa" firstAttribute="top" secondItem="JKC-Tb-Gdv" secondAttribute="bottom" id="OaX-1U-887"/>
-                            <constraint firstItem="os3-3g-7wa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OcP-JD-IiL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Jb-dw-CPt" secondAttribute="bottom" id="acF-Os-5Mw"/>
-                            <constraint firstItem="JKC-Tb-Gdv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="nOW-La-B9K"/>
-                            <constraint firstItem="FV2-IC-DxB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oES-bZ-4Vu"/>
+                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="width" secondItem="1Jb-dw-CPt" secondAttribute="width" id="4YS-su-pPO"/>
+                            <constraint firstItem="os3-3g-7wa" firstAttribute="top" secondItem="JKC-Tb-Gdv" secondAttribute="bottom" id="9A5-dt-DUJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jrF-7i-8Cb" secondAttribute="bottom" id="9nY-pf-hkd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JKC-Tb-Gdv" secondAttribute="trailing" constant="-20" id="PPd-bZ-oqI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Jb-dw-CPt" secondAttribute="trailing" constant="-20" id="Pnj-MK-MA4"/>
+                            <constraint firstItem="JKC-Tb-Gdv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="VSz-P3-76X"/>
+                            <constraint firstItem="JKC-Tb-Gdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="jDF-4r-Db6"/>
+                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="top" secondItem="os3-3g-7wa" secondAttribute="bottom" id="lKS-DH-2Tk"/>
+                            <constraint firstItem="JKC-Tb-Gdv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="2:9" id="nZA-mK-J4f"/>
+                            <constraint firstItem="os3-3g-7wa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="o56-gh-ZKI"/>
+                            <constraint firstItem="jrF-7i-8Cb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="oIY-ra-n0Z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Jb-dw-CPt" secondAttribute="bottom" constant="-2" id="qsq-xi-LwY"/>
+                            <constraint firstItem="1Jb-dw-CPt" firstAttribute="top" secondItem="os3-3g-7wa" secondAttribute="bottom" id="raM-YO-ymO"/>
+                            <constraint firstItem="1Jb-dw-CPt" firstAttribute="leading" secondItem="jrF-7i-8Cb" secondAttribute="trailing" id="t67-Ye-Zo1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="os3-3g-7wa" secondAttribute="trailing" constant="-28" id="tlZ-ty-csE"/>
+                            <constraint firstItem="os3-3g-7wa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="3:10" id="yxY-WJ-fFo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="-6"/>
+            <point key="canvasLocation" x="194" y="-45"/>
         </scene>
     </scenes>
 </document>
