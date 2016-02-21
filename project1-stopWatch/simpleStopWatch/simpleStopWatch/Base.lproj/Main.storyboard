@@ -23,22 +23,31 @@
                                 <rect key="frame" x="0.0" y="134" width="608" height="180"/>
                                 <color key="backgroundColor" red="0.99287458890000002" green="0.85047043010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="retSetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fw8-nT-EY2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrF-7i-8Cb">
                                 <rect key="frame" x="0.0" y="314" width="300" height="286"/>
                                 <color key="backgroundColor" red="0.69073147819801162" green="1" blue="0.48239356592827154" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lze-1l-n7A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jb-dw-CPt">
                                 <rect key="frame" x="300" y="314" width="300" height="288"/>
                                 <color key="backgroundColor" red="0.17876889529860618" green="1" blue="0.98656262222887403" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="stopCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOd-WE-quf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKC-Tb-Gdv" userLabel="timeView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="133.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ss-UbC" userLabel="timeLabel">
-                                        <rect key="frame" x="291" y="8" width="19" height="117.5"/>
+                                        <rect key="frame" x="291" y="8.5" width="19" height="117.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -71,6 +80,9 @@
                             <constraint firstItem="os3-3g-7wa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="3:10" id="yxY-WJ-fFo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lableTime" destination="B9i-Ss-UbC" id="fnQ-1f-hgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
