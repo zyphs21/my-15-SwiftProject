@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     var countNumber : Double = 0
     
     override func viewDidLoad() {
+        lableTime.text = String(countNumber)
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
 
@@ -48,13 +48,12 @@ class ViewController: UIViewController {
     
     func updateTime(){
         countNumber = countNumber + 0.1
-        lableTime.text = String(countNumber)
-        //lableTime.text = String(format: "%.1f", countNumber)
+        //lableTime.text = String(countNumber)
+        lableTime.text = String(format: "%.1f", countNumber)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
