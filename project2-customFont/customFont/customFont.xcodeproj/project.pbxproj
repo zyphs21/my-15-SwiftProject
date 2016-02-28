@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C00FA0E51C7E02CE003B9B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00FA0E41C7E02CE003B9B72 /* AppDelegate.swift */; };
-		C00FA0E71C7E02CE003B9B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00FA0E61C7E02CE003B9B72 /* ViewController.swift */; };
 		C00FA0EA1C7E02CE003B9B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00FA0E81C7E02CE003B9B72 /* Main.storyboard */; };
 		C00FA0EC1C7E02CE003B9B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00FA0EB1C7E02CE003B9B72 /* Assets.xcassets */; };
 		C00FA0EF1C7E02CE003B9B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00FA0ED1C7E02CE003B9B72 /* LaunchScreen.storyboard */; };
+		C0D349391C8331600037C93D /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0D349351C8331600037C93D /* Gaspar Regular.otf */; };
+		C0D3493A1C8331600037C93D /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D349361C8331600037C93D /* MFJinHei_Noncommercial-Regular.ttf */; };
+		C0D3493B1C8331600037C93D /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D349371C8331600037C93D /* MFTongXin_Noncommercial-Regular.ttf */; };
+		C0D3493C1C8331600037C93D /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D349381C8331600037C93D /* MFZhiHei_Noncommercial-Regular.ttf */; };
+		C0D3493F1C8331DC0037C93D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3493E1C8331DC0037C93D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C00FA0E11C7E02CE003B9B72 /* customFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00FA0E41C7E02CE003B9B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C00FA0E61C7E02CE003B9B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C00FA0E91C7E02CE003B9B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C00FA0EB1C7E02CE003B9B72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00FA0EE1C7E02CE003B9B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C00FA0F01C7E02CE003B9B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0D349351C8331600037C93D /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
+		C0D349361C8331600037C93D /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		C0D349371C8331600037C93D /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		C0D349381C8331600037C93D /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		C0D3493E1C8331DC0037C93D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		C00FA0E31C7E02CE003B9B72 /* customFont */ = {
 			isa = PBXGroup;
 			children = (
+				C0D3493D1C8331730037C93D /* Fonts */,
 				C00FA0E41C7E02CE003B9B72 /* AppDelegate.swift */,
-				C00FA0E61C7E02CE003B9B72 /* ViewController.swift */,
-				C00FA0E81C7E02CE003B9B72 /* Main.storyboard */,
-				C00FA0EB1C7E02CE003B9B72 /* Assets.xcassets */,
-				C00FA0ED1C7E02CE003B9B72 /* LaunchScreen.storyboard */,
+				C0D3493E1C8331DC0037C93D /* ViewController.swift */,
 				C00FA0F01C7E02CE003B9B72 /* Info.plist */,
+				C00FA0E81C7E02CE003B9B72 /* Main.storyboard */,
+				C00FA0ED1C7E02CE003B9B72 /* LaunchScreen.storyboard */,
+				C00FA0EB1C7E02CE003B9B72 /* Assets.xcassets */,
 			);
 			path = customFont;
+			sourceTree = "<group>";
+		};
+		C0D3493D1C8331730037C93D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0D349351C8331600037C93D /* Gaspar Regular.otf */,
+				C0D349361C8331600037C93D /* MFJinHei_Noncommercial-Regular.ttf */,
+				C0D349371C8331600037C93D /* MFTongXin_Noncommercial-Regular.ttf */,
+				C0D349381C8331600037C93D /* MFZhiHei_Noncommercial-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +144,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00FA0EF1C7E02CE003B9B72 /* LaunchScreen.storyboard in Resources */,
+				C0D349391C8331600037C93D /* Gaspar Regular.otf in Resources */,
+				C0D3493C1C8331600037C93D /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
+				C0D3493A1C8331600037C93D /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
 				C00FA0EC1C7E02CE003B9B72 /* Assets.xcassets in Resources */,
+				C0D3493B1C8331600037C93D /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
 				C00FA0EA1C7E02CE003B9B72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00FA0E71C7E02CE003B9B72 /* ViewController.swift in Sources */,
+				C0D3493F1C8331DC0037C93D /* ViewController.swift in Sources */,
 				C00FA0E51C7E02CE003B9B72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +311,7 @@
 				C00FA0F51C7E02CE003B9B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

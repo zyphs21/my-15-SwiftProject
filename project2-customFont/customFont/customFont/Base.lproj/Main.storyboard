@@ -10,7 +10,7 @@
         <!--自定义字体-->
         <scene sceneID="8FV-QT-hJG">
             <objects>
-                <viewController id="C6R-cW-r0Y" sceneMemberID="viewController">
+                <viewController id="C6R-cW-r0Y" customClass="ViewController" customModule="customFont" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CYS-wo-Aed"/>
                         <viewControllerLayoutGuide type="bottom" id="7WO-6p-iGD"/>
@@ -24,35 +24,44 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.73644393549999998" green="1" blue="0.9073112753" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dDP-zd-qBh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fontCell" id="dDP-zd-qBh">
                                         <rect key="frame" x="0.0" y="92" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dDP-zd-qBh" id="P3Y-sY-Zrz">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="accessoryView" destination="kGY-b9-WqK" id="bY7-4h-qbR"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-u7-CMa">
-                                <rect key="frame" x="270" y="511" width="60" height="30"/>
+                                <rect key="frame" x="250" y="486" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.38445408429333661" green="1" blue="0.540808045249624" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G5v-5L-Qs6"/>
+                                    <constraint firstAttribute="height" constant="100" id="pZi-i9-yOd"/>
+                                </constraints>
                                 <state key="normal" title="改变字体"/>
+                                <connections>
+                                    <action selector="ToChangeFont:" destination="C6R-cW-r0Y" eventType="touchUpInside" id="DmZ-e4-fFZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kGY-b9-WqK" firstAttribute="leading" secondItem="iV9-qI-TiW" secondAttribute="leadingMargin" id="7c8-el-DLr"/>
+                            <constraint firstItem="E6b-u7-CMa" firstAttribute="top" secondItem="kGY-b9-WqK" secondAttribute="bottom" constant="2" id="SAF-Y7-I83"/>
                             <constraint firstItem="kGY-b9-WqK" firstAttribute="height" secondItem="iV9-qI-TiW" secondAttribute="height" multiplier="7:10" id="SP5-nb-aVL"/>
-                            <constraint firstItem="7WO-6p-iGD" firstAttribute="top" secondItem="E6b-u7-CMa" secondAttribute="bottom" constant="59" id="WIi-VD-ibF"/>
                             <constraint firstItem="E6b-u7-CMa" firstAttribute="centerX" secondItem="iV9-qI-TiW" secondAttribute="centerX" id="sx0-cG-kex"/>
                             <constraint firstItem="kGY-b9-WqK" firstAttribute="top" secondItem="CYS-wo-Aed" secondAttribute="bottom" id="uEt-SG-Ldu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kGY-b9-WqK" secondAttribute="trailing" id="uFM-Ue-FUj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="自定义字体" id="qgF-0l-xgQ"/>
+                    <connections>
+                        <outlet property="changeButton" destination="E6b-u7-CMa" id="2Hb-ov-xr9"/>
+                        <outlet property="tableFontView" destination="kGY-b9-WqK" id="zL3-xj-TtS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70e-Qg-RiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
