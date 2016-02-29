@@ -21,8 +21,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func ToChangeFont(sender: AnyObject) {
         
-        fontIndex = (fontIndex + 1) % 3
+        fontIndex = (fontIndex + 1) % 4
         tableFontView.reloadData()
+        print(fontIndex)
     }
     
     //----
