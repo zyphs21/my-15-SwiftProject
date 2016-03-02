@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -23,18 +25,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     ]
     
+    //定义AVPlayerViewController和AVPlayer
+    var playerViewController = AVPlayerViewController()
+    var playerView           = AVPlayer()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //注意这里一定要添加datasource和delegate
+        videoView.dataSource = self
+        videoView.delegate   = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    //播放按钮点击
+    @IBAction func playButtonPress(sender: AnyObject) {
+        
+        print("button just pressed")
+        
+        let videoPath = NSBundle.mainBundle().pathForResource("eat", ofType: "mp4")
+        
+        print("video path is "+videoPath!)
+        
+        playerView = AVPlayer(URL: NSURL(fileURLWithPath: videoPath!))
+        
+        playerViewController.player = playerView
+        
+        self.presentViewController(playerViewController, animated: true){
+            self.playerViewController.player?.play()
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,12 +70,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = videoView.dequeueReusableCellWithIdentifier("videoCell", forIndexPath: indexPath) as! TableViewCell
+        let cell  = videoView.dequeueReusableCellWithIdentifier("videoCell", forIndexPath: indexPath) as! TableViewCell
         
         let video = data[indexPath.row]
         
         cell.screanShot.image = UIImage(named: video.image)
-        cell.title.text = video.title
+        cell.title.text       = video.title
         
         return cell
     }

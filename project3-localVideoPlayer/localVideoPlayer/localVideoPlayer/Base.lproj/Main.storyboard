@@ -48,24 +48,35 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-t4-xFT">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-D4-IuP">
-                                                    <rect key="frame" x="243" y="80" width="114" height="60"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-D4-IuP">
+                                                    <rect key="frame" x="270" y="80" width="60" height="60"/>
                                                     <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="playButtonPress:" destination="cVu-8z-rL7" eventType="touchUpInside" id="Kj9-vR-c4u"/>
+                                                    </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POH-p2-Usw">
-                                                    <rect key="frame" x="241" y="163" width="119" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POH-p2-Usw">
+                                                    <rect key="frame" x="282" y="163" width="37" height="21"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1PY-t4-xFT" firstAttribute="top" secondItem="Ejm-2b-36K" secondAttribute="topMargin" constant="-8" id="FHv-Hh-5zE"/>
-                                                <constraint firstItem="1PY-t4-xFT" firstAttribute="leading" secondItem="Ejm-2b-36K" secondAttribute="leadingMargin" constant="-8" id="Jhl-ZS-Zhp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1PY-t4-xFT" secondAttribute="bottom" constant="-8.5" id="KwB-JM-ZvI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="1PY-t4-xFT" secondAttribute="trailing" constant="-8" id="zqu-jT-x6F"/>
+                                                <constraint firstItem="4hb-D4-IuP" firstAttribute="centerX" secondItem="Ejm-2b-36K" secondAttribute="centerX" id="Us4-0i-a7v"/>
+                                                <constraint firstItem="POH-p2-Usw" firstAttribute="top" secondItem="4hb-D4-IuP" secondAttribute="bottom" constant="23" id="dHh-gr-VMt"/>
+                                                <constraint firstItem="POH-p2-Usw" firstAttribute="centerX" secondItem="Ejm-2b-36K" secondAttribute="centerX" id="mHo-Bi-DfH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="4hb-D4-IuP" firstAttribute="top" secondItem="1gk-yG-gvL" secondAttribute="top" constant="80" id="2Z5-CN-PTq"/>
+                                            <constraint firstAttribute="bottom" secondItem="POH-p2-Usw" secondAttribute="bottom" constant="36" id="6ta-wq-tK1"/>
+                                            <constraint firstAttribute="trailing" secondItem="1PY-t4-xFT" secondAttribute="trailing" id="8HU-ge-fcV"/>
+                                            <constraint firstAttribute="bottom" secondItem="1PY-t4-xFT" secondAttribute="bottom" id="9Pt-O6-pNW"/>
+                                            <constraint firstItem="1PY-t4-xFT" firstAttribute="leading" secondItem="1gk-yG-gvL" secondAttribute="leading" id="fJx-aA-S4H"/>
+                                            <constraint firstAttribute="bottom" secondItem="4hb-D4-IuP" secondAttribute="bottom" constant="80" id="fXG-rP-EAO"/>
+                                            <constraint firstItem="1PY-t4-xFT" firstAttribute="top" secondItem="1gk-yG-gvL" secondAttribute="top" id="oT5-Iz-Sc0"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="screanShot" destination="1PY-t4-xFT" id="HT3-wT-kpu"/>
                                             <outlet property="title" destination="POH-p2-Usw" id="YQA-Um-r63"/>
@@ -76,15 +87,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ICc-eJ-jAW" firstAttribute="leading" secondItem="VJ8-uj-Rcf" secondAttribute="leadingMargin" constant="-20" id="JU7-6n-GSj"/>
                             <constraint firstItem="ICc-eJ-jAW" firstAttribute="top" secondItem="nFm-zO-Tcw" secondAttribute="bottom" constant="-64" id="RSN-4l-Ea6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ICc-eJ-jAW" secondAttribute="trailing" constant="-20" id="UF4-RL-ubb"/>
                             <constraint firstItem="BWE-8N-lMP" firstAttribute="top" secondItem="ICc-eJ-jAW" secondAttribute="bottom" id="bVo-2N-eJZ"/>
+                            <constraint firstItem="ICc-eJ-jAW" firstAttribute="leading" secondItem="VJ8-uj-Rcf" secondAttribute="leadingMargin" constant="-20" id="rJh-76-wtI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="本地视频" id="eHM-Nz-Z4y" userLabel="localVideo"/>
                     <connections>
-                        <outlet property="videoTableView" destination="ICc-eJ-jAW" id="lcO-nv-CQx"/>
                         <outlet property="videoView" destination="ICc-eJ-jAW" id="Axt-LE-15b"/>
                     </connections>
                 </viewController>

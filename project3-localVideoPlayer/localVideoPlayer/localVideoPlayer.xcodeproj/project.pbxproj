@@ -24,6 +24,7 @@
 		C0173CAE1C85D6720013DAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0173CB01C85D6720013DAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0173CB61C85EBFF0013DAFD /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C01A57D51C87486100CC624C /* eat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = eat.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		C0173CA31C85D6710013DAFD /* localVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C01A57D61C874B4000CC624C /* Movie */,
 				C0173CA41C85D6710013DAFD /* AppDelegate.swift */,
 				C0173CA61C85D6710013DAFD /* ViewController.swift */,
 				C0173CB61C85EBFF0013DAFD /* TableViewCell.swift */,
@@ -65,6 +67,14 @@
 				C0173CB01C85D6720013DAFD /* Info.plist */,
 			);
 			path = localVideoPlayer;
+			sourceTree = "<group>";
+		};
+		C01A57D61C874B4000CC624C /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				C01A57D51C87486100CC624C /* eat.mp4 */,
+			);
+			name = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +301,7 @@
 				C0173CB51C85D6720013DAFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
