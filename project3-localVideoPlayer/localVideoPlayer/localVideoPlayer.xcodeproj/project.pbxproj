@@ -13,6 +13,7 @@
 		C0173CAC1C85D6720013DAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0173CAB1C85D6720013DAFD /* Assets.xcassets */; };
 		C0173CAF1C85D6720013DAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0173CAD1C85D6720013DAFD /* LaunchScreen.storyboard */; };
 		C0173CB71C85EBFF0013DAFD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0173CB61C85EBFF0013DAFD /* TableViewCell.swift */; };
+		C04704D41C889AA100D7F91F /* eat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C01A57D51C87486100CC624C /* eat.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04704D41C889AA100D7F91F /* eat.mp4 in Resources */,
 				C0173CAF1C85D6720013DAFD /* LaunchScreen.storyboard in Resources */,
 				C0173CAC1C85D6720013DAFD /* Assets.xcassets in Resources */,
 				C0173CAA1C85D6710013DAFD /* Main.storyboard in Resources */,
