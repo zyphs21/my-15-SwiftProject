@@ -5,17 +5,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftView" customModule="snapchatPage" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="qUs-hv-KWB"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="IhF-0y-XPR">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="IhF-0y-XPR">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IhF-0y-XPR" secondAttribute="bottom" id="akw-YZ-nOA"/>
+                <constraint firstItem="IhF-0y-XPR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ey7-9Q-GrU"/>
+                <constraint firstItem="IhF-0y-XPR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lmc-IR-Wz2"/>
+                <constraint firstAttribute="trailing" secondItem="IhF-0y-XPR" secondAttribute="trailing" id="mBC-ce-PG1"/>
+            </constraints>
+            <point key="canvasLocation" x="468" y="351"/>
         </view>
     </objects>
     <resources>

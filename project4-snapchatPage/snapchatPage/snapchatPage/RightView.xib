@@ -5,17 +5,27 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightView" customModule="snapchatPage" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="efc-f9-sqX"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="7td-HD-NcR">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="7td-HD-NcR">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7td-HD-NcR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aET-rU-4zr"/>
+                <constraint firstAttribute="bottom" secondItem="7td-HD-NcR" secondAttribute="bottom" id="cfh-8J-HKg"/>
+                <constraint firstItem="7td-HD-NcR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iSx-Pb-f5g"/>
+                <constraint firstAttribute="trailing" secondItem="7td-HD-NcR" secondAttribute="trailing" id="ucY-OY-vZe"/>
+            </constraints>
         </view>
     </objects>
     <resources>

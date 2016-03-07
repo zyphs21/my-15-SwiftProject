@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         let leftView: LeftView = LeftView(nibName:"LeftView", bundle: nil)
         let centerView: CameraView = CameraView(nibName:"CameraView", bundle: nil)
-        let rightView: RightView = RightView(nibName:"Right", bundle: nil)
+        let rightView: RightView = RightView(nibName:"RightView", bundle: nil)
 
         self.addChildViewController(leftView)
         self.ScrollView.addSubview(leftView.view)
