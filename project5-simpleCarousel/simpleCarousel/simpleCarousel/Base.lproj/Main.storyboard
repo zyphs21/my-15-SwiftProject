@@ -31,15 +31,15 @@
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E7m-WV-FiC">
                                             <rect key="frame" x="0.0" y="93" width="600" height="434"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fX3-9g-itC">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="fX3-9g-itC">
                                                 <size key="itemSize" width="300" height="400"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contentCell" id="Jfb-ch-oak" customClass="CollectionViewCell" customModule="simpleCarousel" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="17" width="300" height="400"/>
+                                                    <rect key="frame" x="20" y="17" width="300" height="400"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
@@ -94,7 +94,9 @@
                                         </collectionView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="E7m-WV-FiC" firstAttribute="leading" secondItem="x9E-Nc-qiV" secondAttribute="leading" id="A2d-Jb-VnA"/>
                                         <constraint firstItem="E7m-WV-FiC" firstAttribute="top" secondItem="x9E-Nc-qiV" secondAttribute="top" constant="93" id="ECv-Xk-Uv5"/>
+                                        <constraint firstItem="E7m-WV-FiC" firstAttribute="centerX" secondItem="x9E-Nc-qiV" secondAttribute="centerX" id="dkK-Zu-vgB"/>
                                         <constraint firstItem="E7m-WV-FiC" firstAttribute="centerY" secondItem="x9E-Nc-qiV" secondAttribute="centerY" id="hvc-3P-P7k"/>
                                     </constraints>
                                 </view>
