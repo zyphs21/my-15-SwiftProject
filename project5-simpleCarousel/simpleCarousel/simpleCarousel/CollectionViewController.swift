@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CollectionViewController: UIViewController {
 
     @IBOutlet weak var collectView: UICollectionView!
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UICollectionViewDataSource{
+extension CollectionViewController : UICollectionViewDataSource{
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
