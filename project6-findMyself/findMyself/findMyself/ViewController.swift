@@ -43,7 +43,6 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         let longDelta = 0.05
         let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
-        //定义地图区域和中心坐标（
         //使用当前位置
         var center:CLLocation = locationManager.location!
 //        //使用自定义位置
@@ -56,13 +55,9 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         
         //创建一个大头针对象
         let objectAnnotation = MKPointAnnotation()
-        //设置大头针的显示位置
         objectAnnotation.coordinate = center.coordinate
-        //设置点击大头针之后显示的标题
         objectAnnotation.title = center.description
-        //设置点击大头针之后显示的描述
         objectAnnotation.subtitle = ""
-        //添加大头针
         self.mapView.addAnnotation(objectAnnotation)
         
     }
