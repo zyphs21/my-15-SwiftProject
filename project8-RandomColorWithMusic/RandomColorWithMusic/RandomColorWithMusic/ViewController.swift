@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
 //        var timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self,selector: "showRandomColor", userInfo: nil, repeats: true)
         
-        //drand48()这个方法
+        //drand48()这个方法生成一个浮点值的随机数，这个函数产生一个[0.0, 1.0]区间中的浮点数。这个函数的返回值是Double类型
         let redValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())
         let greenValue = CGFloat(drand48())

@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var refreshControl = UIRefreshControl()
     var size: CGSize = UIScreen.mainScreen().bounds.size
 
-    var navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: size.width, height: 64))
+    var navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 500, height: 64))
     
     
     override func viewDidLoad() {
