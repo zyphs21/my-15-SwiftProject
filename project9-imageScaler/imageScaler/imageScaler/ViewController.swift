@@ -26,6 +26,8 @@ class ViewController: UIViewController , UIScrollViewDelegate{
         scrollView.zoomScale = scrollView.minimumZoomScale
         
         recenterImage()  //使图片保持在中间
+        
+        setGestureRecognizer() //设置双击事件
 
     }
 
@@ -91,7 +93,25 @@ class ViewController: UIViewController , UIScrollViewDelegate{
         
     }
 
-
+    func setGestureRecognizer() {
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleDoubleTap(_:)))
+        doubleTap.numberOfTapsRequired = 2
+        scrollView.addGestureRecognizer(doubleTap)
+    }
+    
+    /**
+     *实现双击放大缩小图片
+     */
+    func handleDoubleTap(recognizer: UITapGestureRecognizer) {
+        if (scrollView.zoomScale > scrollView.minimumZoomScale) {
+            scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+        } else {
+            scrollView.setZoomScale(scrollView.maximumZoomScale, animated: true)
+        }
+    }
+    
+    /****/
+    
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
@@ -100,6 +120,8 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     func scrollViewDidZoom(scrollView: UIScrollView) {
         self.recenterImage()
     }
+    
+    
 
 }
 
