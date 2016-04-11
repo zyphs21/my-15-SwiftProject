@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pua-xp-6fl">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-3Q-uKh">
+                                <rect key="frame" x="175" y="425" width="250" height="45"/>
+                                <color key="backgroundColor" red="0.58417731975340759" green="1" blue="0.15080044274772786" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="MPu-7e-js3"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="euT-fw-XNe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3i-T9-mrn">
+                                <rect key="frame" x="279" y="501" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pua-xp-6fl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2SP-ug-Qgt"/>
+                            <constraint firstItem="B3i-T9-mrn" firstAttribute="top" secondItem="fDc-3Q-uKh" secondAttribute="bottom" constant="31" id="OZS-sx-AQA"/>
+                            <constraint firstItem="fDc-3Q-uKh" firstAttribute="centerX" secondItem="Pua-xp-6fl" secondAttribute="centerX" id="RiV-u0-2k9"/>
+                            <constraint firstItem="fDc-3Q-uKh" firstAttribute="top" secondItem="Pua-xp-6fl" secondAttribute="bottom" constant="17" id="dPR-TQ-YpA"/>
+                            <constraint firstItem="B3i-T9-mrn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwP-9D-Wiq"/>
+                            <constraint firstItem="Pua-xp-6fl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="py1-M7-5LT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDc-3Q-uKh" secondAttribute="trailing" constant="155" id="tbg-yY-oET"/>
+                            <constraint firstItem="fDc-3Q-uKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="155" id="wy5-03-UKM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Pua-xp-6fl" id="kh2-Ot-fXu"/>
+                        <outlet property="playButton" destination="fDc-3Q-uKh" id="NMc-5I-ZEX"/>
+                        <outlet property="resultLabel" destination="B3i-T9-mrn" id="nz1-KX-FUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
