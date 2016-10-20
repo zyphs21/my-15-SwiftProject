@@ -43,36 +43,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //播放按钮点击
-    @IBAction func playButtonPress(sender: AnyObject) {
+    @IBAction func playButtonPress(_ sender: AnyObject) {
         
         print("button just pressed")
         
-        let videoPath = NSBundle.mainBundle().pathForResource("eat", ofType: "mp4")
+        let videoPath = Bundle.main.path(forResource: "eat", ofType: "mp4")
         
         print("video path is "+videoPath!)
         
-        playerView = AVPlayer(URL: NSURL(fileURLWithPath: videoPath!))
+        playerView = AVPlayer(url: URL(fileURLWithPath: videoPath!))
         
         playerViewController.player = playerView
         
-        self.presentViewController(playerViewController, animated: true){
+        self.present(playerViewController, animated: true){
             self.playerViewController.player?.play()
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell  = videoView.dequeueReusableCellWithIdentifier("videoCell", forIndexPath: indexPath) as! TableViewCell
+        let cell  = videoView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! TableViewCell
         
-        let video = data[indexPath.row]
+        let video = data[(indexPath as NSIndexPath).row]
         
         cell.screanShot.image = UIImage(named: video.image)
         cell.title.text       = video.title

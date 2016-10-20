@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        UIApplication.sharedApplication().statusBarHidden = true
+        UIApplication.shared.isStatusBarHidden = true
         
         let leftView: LeftView = LeftView(nibName:"LeftView", bundle: nil)
         let centerView: CameraView = CameraView(nibName:"CameraView", bundle: nil)
@@ -24,15 +24,15 @@ class ViewController: UIViewController {
 
         self.addChildViewController(leftView)
         self.ScrollView.addSubview(leftView.view)
-        leftView.didMoveToParentViewController(self)
+        leftView.didMove(toParentViewController: self)
         
         self.addChildViewController(centerView)
         self.ScrollView.addSubview(centerView.view)
-        centerView.didMoveToParentViewController(self)
+        centerView.didMove(toParentViewController: self)
         
         self.addChildViewController(rightView)
         self.ScrollView.addSubview(rightView.view)
-        rightView.didMoveToParentViewController(self)
+        rightView.didMove(toParentViewController: self)
         
         var centerViewFrame: CGRect = centerView.view.frame
         centerViewFrame.origin.x = self.view.frame.width
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         rightViewFrame.origin.x = 2 * self.view.frame.width
         rightView.view.frame = rightViewFrame
         
-        self.ScrollView.contentSize = CGSizeMake(self.view.frame.width * 3, self.view.frame.size.height)
+        self.ScrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.size.height)
         
     
     }

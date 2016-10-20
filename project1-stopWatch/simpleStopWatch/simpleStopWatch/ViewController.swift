@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var isCounting : Bool = false
     
-    var timer : NSTimer = NSTimer()
+    var timer : Timer = Timer()
     
     var countNumber : Double = 0
     
@@ -24,24 +24,24 @@ class ViewController: UIViewController {
     }
     
 
-    @IBAction func retSetCount(sender: AnyObject) {
+    @IBAction func retSetCount(_ sender: AnyObject) {
         timer.invalidate()
         isCounting = false
         countNumber = 0
         lableTime.text = String(countNumber)
     }
 
-    @IBAction func startCount(sender: AnyObject) {
+    @IBAction func startCount(_ sender: AnyObject) {
         if isCounting{
             return
         }
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTime"),userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector: #selector(ViewController.updateTime),userInfo: nil, repeats: true)
         
         isCounting = true
     }
    
-    @IBAction func stopCount(sender: AnyObject) {
+    @IBAction func stopCount(_ sender: AnyObject) {
         timer.invalidate()
         isCounting = false
     }

@@ -14,7 +14,7 @@ class LeftView: UIViewController {
         super.viewDidLoad()
 
         //把statusbar隐藏
-        UIApplication.sharedApplication().statusBarHidden = true
+        UIApplication.shared.isStatusBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,7 +26,7 @@ class CollectionViewCell: UICollectionViewCell {
         self.clipsToBounds = true
     }
     
-    private func updateUI(){
+    fileprivate func updateUI(){
         ContentImage?.image! = content.featuredImage
         ContentLabel?.text! = content.title
     }
