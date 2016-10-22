@@ -20,11 +20,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //页面显示前把两个textfield位置移出屏幕外，并把登录按钮透明显示
@@ -33,24 +33,24 @@ class LoginViewController: UIViewController {
         loginBtn.alpha = 0
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIViewAnimationOptions.curveEaseOut, animations: {
             
             self.centerAlignPassword.constant += self.view.bounds.width
             self.view.layoutIfNeeded()
             
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 0.10, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.10, options: .curveEaseOut, animations: {
             
             self.centerAlignUsername.constant += self.view.bounds.width
             self.view.layoutIfNeeded()
             
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 0.20, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.20, options: .curveEaseOut, animations: {
             
             self.loginBtn.alpha = 1
             
@@ -71,11 +71,11 @@ class LoginViewController: UIViewController {
     
 
 
-    @IBAction func loginButtonDidPress(sender: AnyObject) {
+    @IBAction func loginButtonDidPress(_ sender: AnyObject) {
         
         let bounds = self.loginBtn.bounds
         
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: UIViewAnimationOptions.CurveLinear, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: UIViewAnimationOptions.curveLinear, animations: {
             
                 self.loginBtn.bounds = CGRect(x: bounds.origin.x-20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
             

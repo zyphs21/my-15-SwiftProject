@@ -31,8 +31,8 @@ class ViewController: UIViewController , UIScrollViewDelegate{
 
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,11 +52,11 @@ class ViewController: UIViewController , UIScrollViewDelegate{
         recenterImage()  //使图片保持在中间
     }
     
-    private func setUpScrollView() {
+    fileprivate func setUpScrollView() {
         
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        scrollView.backgroundColor = UIColor.clearColor()
+        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        scrollView.backgroundColor = UIColor.clear
         scrollView.contentSize = imageView.bounds.size
         
         scrollView.addSubview(imageView)
@@ -67,7 +67,7 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     /**
      *使图片能在某一方向上能与屏幕相匹配，让图片既能完全显示，又能尽量减少屏幕的空闲空间。
      */
-    private func setZoomScaleFor(srollViewSize: CGSize) {
+    fileprivate func setZoomScaleFor(_ srollViewSize: CGSize) {
         
         let imageSize = imageView.bounds.size
         let widthScale = srollViewSize.width / imageSize.width
@@ -82,7 +82,7 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     /**
      *使图片始终保持在屏幕的中间
      */
-    private func recenterImage() {
+    fileprivate func recenterImage() {
         
         let scrollViewSize = scrollView.bounds.size
         let imageViewSize = imageView.frame.size
@@ -102,7 +102,7 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     /**
      *实现双击放大缩小图片
      */
-    func handleDoubleTap(recognizer: UITapGestureRecognizer) {
+    func handleDoubleTap(_ recognizer: UITapGestureRecognizer) {
         if (scrollView.zoomScale > scrollView.minimumZoomScale) {
             scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
         } else {
@@ -112,12 +112,12 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     
     /****/
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
     
     //这个方法在缩放的时候就会被调用,方法内调用recenterImage方法，使图片保持在中间
-    func scrollViewDidZoom(scrollView: UIScrollView) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         self.recenterImage()
     }
     

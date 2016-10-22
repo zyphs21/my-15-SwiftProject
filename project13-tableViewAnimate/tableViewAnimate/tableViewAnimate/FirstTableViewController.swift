@@ -21,13 +21,13 @@ class FirstTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        UIApplication.sharedApplication().statusBarHidden = true
+        UIApplication.shared.isStatusBarHidden = true
         
-        self.view.backgroundColor = UIColor.blackColor()
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.view.backgroundColor = UIColor.black
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-        self.tableView.registerClass(FirstTableViewCell.self, forCellReuseIdentifier: "tableCell")
+        self.tableView.register(FirstTableViewCell.self, forCellReuseIdentifier: "tableCell")
 
     }
 
@@ -36,7 +36,7 @@ class FirstTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         animateTable()
     }
     
@@ -49,7 +49,7 @@ class FirstTableViewController: UITableViewController {
         
         for i in cells {
             let cell: UITableViewCell = i as UITableViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
         }
         
         var index = 0
@@ -58,9 +58,9 @@ class FirstTableViewController: UITableViewController {
             
             let cell: UITableViewCell = a as UITableViewCell
             
-            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
                 
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
                 
                 }, completion: nil)
             
@@ -70,34 +70,34 @@ class FirstTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return tableData.count
     }
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
         
-        cell.textLabel?.text = tableData[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.textLabel?.backgroundColor = UIColor.clearColor()
+        cell.textLabel?.text = tableData[(indexPath as NSIndexPath).row]
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.backgroundColor = UIColor.clear
         cell.textLabel?.font = UIFont(name: "Avenir Next", size: 18)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
         
     }
 
-    func colorforIndex(index: Int) -> UIColor {
+    func colorforIndex(_ index: Int) -> UIColor {
         
         let itemCount = tableData.count - 1
         let color = (CGFloat(index) / CGFloat(itemCount)) * 0.6
@@ -105,15 +105,15 @@ class FirstTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        cell.backgroundColor =  colorforIndex(indexPath.row)
+        cell.backgroundColor =  colorforIndex((indexPath as NSIndexPath).row)
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegueWithIdentifier("SecondTableViewController", sender: nil)
+        performSegue(withIdentifier: "SecondTableViewController", sender: nil)
         
     }
     /*

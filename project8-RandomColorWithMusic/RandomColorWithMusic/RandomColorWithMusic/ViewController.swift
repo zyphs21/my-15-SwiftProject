@@ -17,17 +17,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarHidden = true
+        UIApplication.shared.isStatusBarHidden = true
     }
 
-    @IBAction func playMusicButtonPressed(sender: AnyObject) {
+    @IBAction func playMusicButtonPressed(_ sender: AnyObject) {
         
-        let backGroundMusic = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("BGMusic", ofType:"mp3")!)
+        let backGroundMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "BGMusic", ofType:"mp3")!)
         
         do{
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
-            try audioPlayer = AVAudioPlayer(contentsOfURL: backGroundMusic)
+            try audioPlayer = AVAudioPlayer(contentsOf: backGroundMusic)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
         }catch let audioError as NSError{
@@ -45,16 +45,16 @@ class ViewController: UIViewController {
         
         //graditent color
         gradientLayer.frame = view.bounds
-        let color1 = UIColor(white: 0.5, alpha: 0.2).CGColor as CGColorRef
-        let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).CGColor as CGColorRef
-        let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).CGColor as CGColorRef
-        let color4 = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3).CGColor as CGColorRef
-        let color5 = UIColor(white: 0.4, alpha: 0.2).CGColor as CGColorRef
+        let color1 = UIColor(white: 0.5, alpha: 0.2).cgColor as CGColor
+        let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).cgColor as CGColor
+        let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).cgColor as CGColor
+        let color4 = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3).cgColor as CGColor
+        let color5 = UIColor(white: 0.4, alpha: 0.2).cgColor as CGColor
         
         gradientLayer.colors = [color1, color2, color3, color4, color5]
         gradientLayer.locations = [0.10, 0.30, 0.50, 0.70, 0.90]
-        gradientLayer.startPoint = CGPointMake(0, 0)
-        gradientLayer.endPoint = CGPointMake(1, 1)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         self.view.layer.addSublayer(gradientLayer)
         
     }

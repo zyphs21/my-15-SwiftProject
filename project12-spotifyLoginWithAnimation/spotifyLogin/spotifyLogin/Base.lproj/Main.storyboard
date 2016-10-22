@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--LoginSplash-->
@@ -15,38 +16,34 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-6t-wkV">
-                                <rect key="frame" x="191" y="40" width="218" height="66"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-6t-wkV"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1A-Ic-oXK">
-                                <rect key="frame" x="40" y="523" width="520" height="47"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="zs6-vK-9LM"/>
                                 </constraints>
                                 <state key="normal" title="Sign up">
-                                    <color key="titleColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lal-Fl-ntm">
-                                <rect key="frame" x="40" y="451" width="520" height="47"/>
-                                <color key="backgroundColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="3R3-LV-LJF"/>
                                     <constraint firstAttribute="height" constant="47" id="V36-N4-Hd1"/>
                                 </constraints>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="nJy-Vb-Hk3" kind="modal" id="FSV-R5-TCT"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="s1A-Ic-oXK" secondAttribute="trailing" constant="20" id="6jb-kq-9JF"/>
                             <constraint firstItem="ONU-6t-wkV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="BsO-8K-TBZ"/>
@@ -78,17 +75,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2fU-B5-3w5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HCp-Z2-1iZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-dC-e4H">
-                                <rect key="frame" x="265" y="40" width="71" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uY-ol-WAc">
-                                <rect key="frame" x="140" y="97" width="320" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="16q-ET-DvC"/>
                                     <constraint firstAttribute="height" constant="50" id="Vw9-B0-icv"/>
@@ -97,7 +92,6 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-7A-sfi">
-                                <rect key="frame" x="140" y="176" width="320" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="ffR-yh-0eF"/>
                                     <constraint firstAttribute="height" constant="50" id="wsS-Vb-qRR"/>
@@ -106,28 +100,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt0-4j-Zrt">
-                                <rect key="frame" x="215" y="284" width="170" height="70"/>
-                                <color key="backgroundColor" red="0.22569210625676811" green="0.62536057692307701" blue="0.33321026912698248" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.22569210625676811" green="0.62536057692307701" blue="0.33321026912698248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="IE6-nN-J1z"/>
                                     <constraint firstAttribute="height" constant="70" id="YA2-Gf-cpp"/>
                                 </constraints>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonDidPress:" destination="nJy-Vb-Hk3" eventType="touchUpInside" id="uAZ-RZ-hur"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-lQ-a7T">
-                                <rect key="frame" x="47" y="40" width="19" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-lQ-a7T">
                                 <state key="normal" image="Back-icon"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="UM3-uo-ZF1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3844540843" green="1" blue="0.54080804520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pt0-4j-Zrt" firstAttribute="top" secondItem="FYw-7A-sfi" secondAttribute="bottom" constant="58" id="3kQ-2R-e09"/>
                             <constraint firstItem="Mah-dC-e4H" firstAttribute="centerX" secondItem="HCp-Z2-1iZ" secondAttribute="centerX" id="5ZY-RP-Yn6"/>

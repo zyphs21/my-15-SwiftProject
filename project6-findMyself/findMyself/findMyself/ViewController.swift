@@ -19,7 +19,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mapView.mapType = MKMapType.Standard
+        self.mapView.mapType = MKMapType.standard
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +30,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
 //        return UIStatusBarStyle.LightContent
 //    }
 
-    @IBAction func FindButtonDidPressed(sender: AnyObject) {
+    @IBAction func FindButtonDidPressed(_ sender: AnyObject) {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -44,7 +44,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
         //使用当前位置
-        var center:CLLocation = locationManager.location!
+        let center:CLLocation = locationManager.location!
 //        //使用自定义位置
 //        let center:CLLocation = CLLocation(latitude: 32.029171, longitude: 118.788231)
         let currentRegion:MKCoordinateRegion = MKCoordinateRegion(center: center.coordinate,
@@ -62,12 +62,12 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     
         self.locationLabel.text = "更新位置发生错误：" + error.description
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
             
@@ -85,7 +85,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         })
     }
     
-    func displayLocationInfo(placemark:CLPlacemark?){
+    func displayLocationInfo(_ placemark:CLPlacemark?){
         
         if let containsPlacemark = placemark {
             

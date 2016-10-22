@@ -20,16 +20,16 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     var dataArray1 = [Int]()
     var dataArray2 = [Int]()
     var dataArray3 = [Int]()
-    var bounds: CGRect = CGRectZero
+    var bounds: CGRect = CGRect.zero
     
-    @IBAction func playButtonDidPress(sender: AnyObject) {
+    @IBAction func playButtonDidPress(_ sender: AnyObject) {
         
         pickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 0, animated: true)
         pickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 1, animated: true)
         pickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 2, animated: true)
         
         
-        if(dataArray1[pickerView.selectedRowInComponent(0)] == dataArray2[pickerView.selectedRowInComponent(1)] && dataArray2[pickerView.selectedRowInComponent(1)] == dataArray3[pickerView.selectedRowInComponent(2)]) {
+        if(dataArray1[pickerView.selectedRow(inComponent: 0)] == dataArray2[pickerView.selectedRow(inComponent: 1)] && dataArray2[pickerView.selectedRow(inComponent: 1)] == dataArray3[pickerView.selectedRow(inComponent: 2)]) {
             
             resultLabel.text = "Bingo!"
             
@@ -42,13 +42,13 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
         //animate
         
-        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, options: .CurveLinear, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, options: .curveLinear, animations: {
             
             self.playButton.bounds = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.size.width + 20, height: self.bounds.size.height)
             
             }, completion: { (compelete: Bool) in
                 
-                UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions(), animations: {
                     
                     self.playButton.bounds = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.size.width, height: self.bounds.size.height)
                     
@@ -83,21 +83,21 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         // Dispose of any resources that can be recreated.
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         playButton.alpha = 0
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.3, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
             
             self.playButton.alpha = 1
             
@@ -105,23 +105,23 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
     }
 
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 100
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     
-    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 100.0
     }
     
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 100.0
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let pickerLabel = UILabel()
         
@@ -134,7 +134,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         }
         
         pickerLabel.font = UIFont(name: "Apple Color Emoji", size: 80)
-        pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.textAlignment = NSTextAlignment.center
         
         return pickerLabel
         
