@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         emojiTableView?.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFER)
         
         tableViewController.refreshControl = self.refreshControl
-        let attributes = [NSForegroundColorAttributeName: UIColor.white]
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         //这个selector的方式已经弃用，self.refreshControl.addTarget(self, action: "didLoadEmoji", forControlEvents: .ValueChanged)
         self.refreshControl.addTarget(self, action: #selector(ViewController.didLoadEmoji), for: .valueChanged)
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    func didLoadEmoji() {
+    @objc func didLoadEmoji() {
         self.emojiData = secondEmojiData
         self.tableViewController.tableView.reloadData()
         self.refreshControl.endRefreshing()

@@ -64,7 +64,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     
-        self.locationLabel.text = "更新位置发生错误：" + error.description
+        self.locationLabel.text = "更新位置发生错误：" + error.localizedDescription
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

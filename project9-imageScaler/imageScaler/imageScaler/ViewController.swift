@@ -102,7 +102,7 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     /**
      *实现双击放大缩小图片
      */
-    func handleDoubleTap(_ recognizer: UITapGestureRecognizer) {
+    @objc func handleDoubleTap(_ recognizer: UITapGestureRecognizer) {
         if (scrollView.zoomScale > scrollView.minimumZoomScale) {
             scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
         } else {

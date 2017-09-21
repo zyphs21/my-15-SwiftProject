@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         isCounting = false
     }
     
-    func updateTime(){
+    @objc func updateTime(){
         countNumber = countNumber + 0.1
         //lableTime.text = String(countNumber)
         lableTime.text = String(format: "%.1f", countNumber)

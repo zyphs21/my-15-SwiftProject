@@ -20,7 +20,7 @@ open class VideoSplashViewController: UIViewController {
     
     fileprivate let moviePlayer = AVPlayerViewController()
     fileprivate var moviePlayerSoundLevel: Float = 1.0
-    open var contentURL: URL = URL() {
+    open var contentURL: URL = URL(string: "http")! {
         didSet {
             setMoviePlayer(contentURL)
         }
@@ -62,11 +62,11 @@ open class VideoSplashViewController: UIViewController {
         didSet {
             switch fillMode {
             case .resize:
-                moviePlayer.videoGravity = AVLayerVideoGravityResize
+                moviePlayer.videoGravity = AVLayerVideoGravity.resize.rawValue
             case .resizeAspect:
-                moviePlayer.videoGravity = AVLayerVideoGravityResizeAspect
+                moviePlayer.videoGravity = AVLayerVideoGravity.resizeAspect.rawValue
             case .resizeAspectFill:
-                moviePlayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+                moviePlayer.videoGravity = AVLayerVideoGravity.resizeAspectFill.rawValue
             }
         }
     }
@@ -109,7 +109,7 @@ open class VideoSplashViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func playerItemDidReachEnd() {
+    @objc func playerItemDidReachEnd() {
         moviePlayer.player?.seek(to: kCMTimeZero)
         moviePlayer.player?.play()
     }

@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func animateMask() {
         
         let keyFrameAnimation = CAKeyframeAnimation(keyPath: "bounds")
-        keyFrameAnimation.delegate = self
+        keyFrameAnimation.delegate = self as? CAAnimationDelegate
         keyFrameAnimation.duration = 0.6
         keyFrameAnimation.beginTime = CACurrentMediaTime() + 0.5
         keyFrameAnimation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    override func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         self.imageView!.layer.mask = nil
     }
 

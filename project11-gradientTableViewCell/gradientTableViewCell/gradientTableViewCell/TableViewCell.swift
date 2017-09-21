@@ -35,6 +35,7 @@ class TableViewCell: UITableViewCell {
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.04, 0.95, 1.0]
         layer.insertSublayer(gradientLayer, at: 0)
+        contentView.layer.isHidden = true
     }
     //重写init方法，必须调用下面这个方法？
     required init?(coder aDecoder: NSCoder) {
